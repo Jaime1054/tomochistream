@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomochisteam | Cuentas de Streaming al Mejor Precio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f19',
+                        cardBg: '#131c2e',
+                        cardHover: '#1a2640',
+                        accentPurple: '#8b5cf6',
+                        accentPink: '#ec4899',
+                        accentCyan: '#06b6d4',
+                        neonGreen: '#10b981'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkBg text-gray-100 antialiased selection:bg-accentPurple selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-40 bg-darkBg/80 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-accentPurple to-accentPink flex items-center justify-center shadow-lg shadow-purple-500/30 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-bolt text-white text-lg"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">Tomochi<span class="text-accentCyan">steam</span></span>
+                    <span class="text-[10px] text-gray-400 tracking-widest uppercase font-semibold">Streaming sin límites</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#catalogo" class="hover:text-accentCyan transition-colors">Catálogo</a>
+                <a href="#como-funciona" class="hover:text-accentCyan transition-colors">¿Cómo Funciona?</a>
+                <a href="#beneficios" class="hover:text-accentCyan transition-colors">Garantía</a>
+                <a href="#testimonios" class="hover:text-accentCyan transition-colors">Opiniones</a>
+                <a href="#faq" class="hover:text-accentCyan transition-colors">Preguntas Frecuentes</a>
+            </div>
+
+            <!-- CTA Right -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="https://wa.me/573126732080?text=Hola%20Tomochisteam,%20quiero%20comprar%20una%20cuenta%20de%20streaming" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-emerald-600/20 flex items-center space-x-2 transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Atención Inmediata</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2 rounded-lg bg-cardBg border border-gray-800">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-gray-800 px-6 pt-4 pb-6 space-y-4">
+            <a href="#catalogo" class="block text-gray-300 hover:text-accentCyan font-medium py-1">Catálogo</a>
+            <a href="#como-funciona" class="block text-gray-300 hover:text-accentCyan font-medium py-1">¿Cómo Funciona?</a>
+            <a href="#beneficios" class="block text-gray-300 hover:text-accentCyan font-medium py-1">Garantía</a>
+            <a href="#testimonios" class="block text-gray-300 hover:text-accentCyan font-medium py-1">Opiniones</a>
+            <a href="#faq" class="block text-gray-300 hover:text-accentCyan font-medium py-1">Preguntas Frecuentes</a>
+            <div class="pt-2">
+                <a href="https://wa.me/573126732080?text=Hola%20Tomochisteam,%20quiero%20comprar%20una%20cuenta%20de%20streaming" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-3 rounded-xl font-semibold text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Contactar por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative pt-12 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
+        <!-- Background Glow Effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accentPurple/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-80 h-80 bg-accentCyan/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-cardBg border border-purple-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-purple-300">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        <span>Cuentas Verificadas & Garantizadas al 100%</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Disfruta tus series y música favorita <span class="gradient-text">sin pagar de más</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0">
+                        Obtén acceso inmediato a Netflix, Disney+, Spotify, HBO Max y más servicios de streaming con entrega rápida, soporte personalizado y total garantía.
+                    </p>
+                    
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-2">
+                        <a href="#catalogo" class="w-full sm:w-auto bg-gradient-to-r from-accentPurple to-pink-600 hover:from-purple-600 hover:to-pink-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-purple-500/25 text-center transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-fire mr-2"></i> Ver Catálogo y Precios
+                        </a>
+                        <a href="https://wa.me/573126732080?text=Hola%20Tomochisteam,%20necesito%20asesoría%20para%20elegir%20un%20servicio" target="_blank" class="w-full sm:w-auto bg-cardBg hover:bg-cardHover text-gray-200 border border-gray-700 font-semibold px-6 py-4 rounded-xl text-center transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                            <span>Hablar con Asesor</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust indicators small -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-gray-800/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl font-bold text-white">+5,000</div>
+                            <div class="text-xs text-gray-400">Clientes Felices</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-white">5 Min</div>
+                            <div class="text-xs text-gray-400">Entrega Rápida</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-emerald-400">100%</div>
+                            <div class="text-xs text-gray-400">Garantía Activa</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Banner -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none animate-float">
+                        <!-- Main Card Glow -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-2xl blur-lg opacity-35"></div>
+                        
+                        <div class="relative glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+                            <div class="flex items-center justify-between border-b border-gray-800 pb-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-12 h-12 rounded-xl bg-red-600/20 text-red-500 flex items-center justify-center text-2xl font-bold">
+                                        <i class="fa-brands fa-netflix"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg text-white">Netflix Ultra HD</h3>
+                                        <span class="text-xs text-emerald-400 font-medium bg-emerald-950/50 px-2 py-0.5 rounded-full border border-emerald-800">Disponible Inmediato</span>
+                                    </div>
+                                </div>
+                                <span class="text-2xl font-extrabold text-cyan-400">$13.000 <span class="text-xs text-gray-400 font-normal">/33 días</span></span>
+                            </div>
+
+                            <ul class="space-y-3 text-sm text-gray-300">
+                                <li class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-check-circle text-accentCyan"></i>
+                                    <span>Perfil 100% privado con PIN de seguridad</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-check-circle text-accentCyan"></i>
+                                    <span>Calidad Máxima 4K Ultra HD + HDR</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-check-circle text-accentCyan"></i>
+                                    <span>Pantalla para Smart TV, celular y PC</span>
+                                </li>
+                            </ul>
+
+                            <button onclick="openCheckout('Netflix - 33 días', '$13.000')" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3.5 rounded-xl shadow-md transition-all flex items-center justify-center space-x-2">
+                                <span>Comprar Ahora</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRUST LOGOS / PLATFORMS BANNER -->
+    <section class="py-10 bg-cardBg/40 border-y border-gray-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-6">Las plataformas más populares al alcance de un clic</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-85 text-2xl sm:text-3xl font-bold">
+                <span class="flex items-center space-x-2 text-red-500"><i class="fa-brands fa-netflix"></i> <span class="text-base text-gray-300 font-semibold">Netflix</span></span>
+                <span class="flex items-center space-x-2 text-blue-400"><i class="fa-solid fa-film"></i> <span class="text-base text-gray-300 font-semibold">Disney+</span></span>
+                <span class="flex items-center space-x-2 text-emerald-400"><i class="fa-brands fa-spotify"></i> <span class="text-base text-gray-300 font-semibold">Spotify</span></span>
+                <span class="flex items-center space-x-2 text-purple-400"><i class="fa-solid fa-tv"></i> <span class="text-base text-gray-300 font-semibold">Max</span></span>
+                <span class="flex items-center space-x-2 text-cyan-400"><i class="fa-solid fa-play"></i> <span class="text-base text-gray-300 font-semibold">Prime Video</span></span>
+                <span class="flex items-center space-x-2 text-orange-400"><i class="fa-solid fa-film"></i> <span class="text-base text-gray-300 font-semibold">ViX</span></span>
+                <span class="flex items-center space-x-2 text-pink-400"><i class="fa-solid fa-palette"></i> <span class="text-base text-gray-300 font-semibold">Canva</span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOGO DE SERVICIOS -->
+    <section id="catalogo" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-accentPurple text-sm font-bold uppercase tracking-widest bg-purple-950/40 px-3 py-1 rounded-full border border-purple-800/50">Catálogo de Servicios</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Elige tu entretenimiento favorito</h2>
+                <p class="text-gray-400 text-base sm:text-lg">Precios justos, cuentas estables y soporte garantizado durante todo tu periodo de suscripción.</p>
+                
+                <!-- Category Filters -->
+                <div class="flex flex-wrap justify-center gap-2 pt-4">
+                    <button onclick="filterCatalog('all')" id="btn-all" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-accentPurple text-white transition-all shadow-md">Todos</button>
+                    <button onclick="filterCatalog('video')" id="btn-video" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-cardBg hover:bg-cardHover text-gray-300 border border-gray-800 transition-all">Video & Series</button>
+                    <button onclick="filterCatalog('music')" id="btn-music" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-cardBg hover:bg-cardHover text-gray-300 border border-gray-800 transition-all">Música</button>
+                    <button onclick="filterCatalog('combo')" id="btn-combo" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-cardBg hover:bg-cardHover text-gray-300 border border-gray-800 transition-all">Combos / Familiar</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Netflix -->
+                <div class="product-card glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 hover:border-purple-500/50 transition-all group" data-category="video">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-14 h-14 rounded-xl bg-red-600/20 text-red-500 flex items-center justify-center text-3xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-netflix"></i>
+                            </div>
+                            <span class="bg-purple-900/50 text-purple-300 border border-purple-700/50 text-xs font-bold px-2.5 py-1 rounded-full">Más Vendido</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Netflix Ultra HD</h3>
+                        <p class="text-xs text-gray-400 mb-4">Disfruta de películas y series en 4K sin interrupciones.</p>
+                        
+                        <div class="space-y-2.5 mb-6 text-sm text-gray-300">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>1 Pantalla (Perfil privado con PIN)</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Calidad 4K Ultra HD garantizada</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Opciones: 33 días $13.000 o 27 días $11.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-baseline justify-between mb-4 pt-4 border-t border-gray-800">
+                            <span class="text-xs text-gray-400">Precio especial</span>
+                            <span class="text-2xl font-extrabold text-white">$13.000 <span class="text-xs text-gray-400 font-normal">/33 días</span></span>
+                        </div>
+                        <button onclick="openCheckout('Netflix - 33 días', '$13.000')" class="w-full bg-accentPurple hover:bg-purple-600 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-purple-600/20 flex items-center justify-center space-x-2">
+                            <span>Comprar Cuenta</span>
+                            <i class="fa-solid fa-cart-shopping text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Disney+ -->
+                <div class="product-card glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 hover:border-blue-500/50 transition-all group" data-category="video">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-14 h-14 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-film"></i>
+                            </div>
+                            <span class="bg-blue-900/50 text-blue-300 border border-blue-700/50 text-xs font-bold px-2.5 py-1 rounded-full">Estrenos</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Disney+ & Star+</h3>
+                        <p class="text-xs text-gray-400 mb-4">Todo el contenido de Disney, Pixar, Marvel, Star Wars y deportes.</p>
+                        
+                        <div class="space-y-2.5 mb-6 text-sm text-gray-300">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Pantalla completa / Perfil individual</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Calidad HD y 4K disponible</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Estándar $5.000 · Premium $8.000 · + ESPN $9.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-baseline justify-between mb-4 pt-4 border-t border-gray-800">
+                            <span class="text-xs text-gray-400">Precio especial</span>
+                            <span class="text-2xl font-extrabold text-white">$5.000 <span class="text-xs text-gray-400 font-normal">desde</span></span>
+                        </div>
+                        <button onclick="openCheckout('Disney+ Estándar', '$5.000')" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-blue-600/20 flex items-center justify-center space-x-2">
+                            <span>Comprar Cuenta</span>
+                            <i class="fa-solid fa-cart-shopping text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Spotify -->
+                <div class="product-card glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 hover:border-emerald-500/50 transition-all group" data-category="music">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-14 h-14 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-spotify"></i>
+                            </div>
+                            <span class="bg-emerald-900/50 text-emerald-300 border border-emerald-700/50 text-xs font-bold px-2.5 py-1 rounded-full">Música sin anuncios</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Spotify Premium</h3>
+                        <p class="text-xs text-gray-400 mb-4">Música ilimitada sin publicidad, saltos ilimitados y modo offline.</p>
+                        
+                        <div class="space-y-2.5 mb-6 text-sm text-gray-300">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Tu propia cuenta o invitación a plan familiar</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Audio de alta calidad</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Opciones: 1 mes $10.000 o 3 meses $25.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-baseline justify-between mb-4 pt-4 border-t border-gray-800">
+                            <span class="text-xs text-gray-400">Precio especial</span>
+                            <span class="text-2xl font-extrabold text-white">$10.000 <span class="text-xs text-gray-400 font-normal">/mes</span></span>
+                        </div>
+                        <button onclick="openCheckout('Spotify Premium', '$10.000 / mes')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center space-x-2">
+                            <span>Comprar Cuenta</span>
+                            <i class="fa-solid fa-cart-shopping text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4: Max (HBO) -->
+                <div class="product-card glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 hover:border-purple-500/50 transition-all group" data-category="video">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-14 h-14 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-tv"></i>
+                            </div>
+                            <span class="bg-gray-800 text-gray-300 border border-gray-700 text-xs font-bold px-2.5 py-1 rounded-full">Estrenos HBO</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Max (Antes HBO Max)</h3>
+                        <p class="text-xs text-gray-400 mb-4">Disfruta de HBO, Warner Bros, DC Comics y deportes en vivo.</p>
+                        
+                        <div class="space-y-2.5 mb-6 text-sm text-gray-300">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Perfil privado con PIN</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Calidad 4K disponible</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Perfil privado con PIN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-baseline justify-between mb-4 pt-4 border-t border-gray-800">
+                            <span class="text-xs text-gray-400">Precio especial</span>
+                            <span class="text-2xl font-extrabold text-white">$5.000 <span class="text-xs text-gray-400 font-normal">/mes</span></span>
+                        </div>
+                        <button onclick="openCheckout('Max (HBO)', '$5.000 / mes')" class="w-full bg-accentPurple hover:bg-purple-600 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-purple-600/20 flex items-center justify-center space-x-2">
+                            <span>Comprar Cuenta</span>
+                            <i class="fa-solid fa-cart-shopping text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 5: Prime Video -->
+                <div class="product-card glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 hover:border-cyan-500/50 transition-all group" data-category="video">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-14 h-14 rounded-xl bg-cyan-600/20 text-cyan-400 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <span class="bg-cyan-950 text-cyan-300 border border-cyan-800 text-xs font-bold px-2.5 py-1 rounded-full">Amazon</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Amazon Prime Video</h3>
+                        <p class="text-xs text-gray-400 mb-4">Series originales, películas exclusivas y fútbol internacional.</p>
+                        
+                        <div class="space-y-2.5 mb-6 text-sm text-gray-300">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Pantalla completa o perfil personal</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Resolución 4K UHD</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Duración: 30 Días</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-baseline justify-between mb-4 pt-4 border-t border-gray-800">
+                            <span class="text-xs text-gray-400">Precio especial</span>
+                            <span class="text-2xl font-extrabold text-white">$6.000 <span class="text-xs text-gray-400 font-normal">/mes</span></span>
+                        </div>
+                        <button onclick="openCheckout('Amazon Prime Video', '$6.000 / mes')" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-cyan-600/20 flex items-center justify-center space-x-2">
+                            <span>Comprar Cuenta</span>
+                            <i class="fa-solid fa-cart-shopping text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 6: ViX -->
+                <div class="product-card glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 hover:border-pink-500/50 transition-all group" data-category="combo">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-14 h-14 rounded-xl bg-pink-600/20 text-pink-400 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <span class="bg-orange-900/50 text-orange-300 border border-orange-700/50 text-xs font-bold px-2.5 py-1 rounded-full">Entretenimiento</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">ViX</h3>
+                        <p class="text-xs text-gray-400 mb-4">Disfruta tus series, películas y contenido latino favorito.</p>
+                        
+                        <div class="space-y-2.5 mb-6 text-sm text-gray-300">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Acceso a la plataforma ViX</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+                                <span>Duración: 30 días</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-baseline justify-between mb-4 pt-4 border-t border-gray-800">
+                            <span class="text-xs text-gray-400">Precio especial</span>
+                            <span class="text-2xl font-extrabold text-white">$7.000 <span class="text-xs text-gray-400 font-normal">/mes</span></span>
+                        </div>
+                        <button onclick="openCheckout('ViX', '$7.000 / mes')" class="w-full bg-gradient-to-r from-accentPurple to-pink-600 hover:from-purple-600 hover:to-pink-500 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-pink-600/20 flex items-center justify-center space-x-2">
+                            <span>Comprar Cuenta</span>
+                            <i class="fa-solid fa-cart-shopping text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 7: Crunchyroll -->
+                <div class="product-card glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 hover:border-orange-500/50 transition-all group" data-category="video">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-14 h-14 rounded-xl bg-orange-600/20 text-orange-400 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform"><i class="fa-solid fa-play"></i></div>
+                            <span class="bg-orange-900/50 text-orange-300 border border-orange-700/50 text-xs font-bold px-2.5 py-1 rounded-full">Anime</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Crunchyroll</h3>
+                        <p class="text-xs text-gray-400 mb-4">Anime, manga y estrenos exclusivos sin anuncios.</p>
+                        <div class="space-y-2.5 mb-6 text-sm text-gray-300"><div class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>Duración: 30 días</span></div></div>
+                    </div>
+                    <div><div class="flex items-baseline justify-between mb-4 pt-4 border-t border-gray-800"><span class="text-xs text-gray-400">Precio especial</span><span class="text-2xl font-extrabold text-white">$6.000</span></div><button onclick="openCheckout('Crunchyroll', '$6.000')" class="w-full bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center space-x-2"><span>Comprar Cuenta</span><i class="fa-solid fa-cart-shopping text-xs"></i></button></div>
+                </div>
+
+                <!-- Card 8: YouTube Premium -->
+                <div class="product-card glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 hover:border-red-500/50 transition-all group" data-category="video">
+                    <div>
+                        <div class="flex justify-between items-start mb-4"><div class="w-14 h-14 rounded-xl bg-red-600/20 text-red-400 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform"><i class="fa-brands fa-youtube"></i></div></div>
+                        <h3 class="text-xl font-bold text-white mb-1">YouTube Premium</h3>
+                        <p class="text-xs text-gray-400 mb-4">Videos sin anuncios, YouTube Music y reproducción en segundo plano.</p>
+                        <div class="space-y-2.5 mb-6 text-sm text-gray-300"><div class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>Duración: 30 días</span></div></div>
+                    </div>
+                    <div><div class="flex items-baseline justify-between mb-4 pt-4 border-t border-gray-800"><span class="text-xs text-gray-400">Precio especial</span><span class="text-2xl font-extrabold text-white">$11.000</span></div><button onclick="openCheckout('YouTube Premium', '$11.000')" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center space-x-2"><span>Comprar Cuenta</span><i class="fa-solid fa-cart-shopping text-xs"></i></button></div>
+                </div>
+
+                <!-- Card 9: Paramount+ -->
+                <div class="product-card glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 hover:border-blue-500/50 transition-all group" data-category="video">
+                    <div>
+                        <div class="flex justify-between items-start mb-4"><div class="w-14 h-14 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform"><i class="fa-solid fa-star"></i></div></div>
+                        <h3 class="text-xl font-bold text-white mb-1">Paramount+</h3>
+                        <p class="text-xs text-gray-400 mb-4">Películas, series y contenido exclusivo de Paramount.</p>
+                        <div class="space-y-2.5 mb-6 text-sm text-gray-300"><div class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>Duración: 30 días</span></div></div>
+                    </div>
+                    <div><div class="flex items-baseline justify-between mb-4 pt-4 border-t border-gray-800"><span class="text-xs text-gray-400">Precio especial</span><span class="text-2xl font-extrabold text-white">$8.000</span></div><button onclick="openCheckout('Paramount+', '$8.000')" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center space-x-2"><span>Comprar Cuenta</span><i class="fa-solid fa-cart-shopping text-xs"></i></button></div>
+                </div>
+
+                <!-- Card 10: Canva -->
+                <div class="product-card glass-card rounded-2xl p-6 flex flex-col justify-between border border-gray-800 hover:border-cyan-500/50 transition-all group" data-category="combo">
+                    <div>
+                        <div class="flex justify-between items-start mb-4"><div class="w-14 h-14 rounded-xl bg-cyan-600/20 text-cyan-400 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform"><i class="fa-solid fa-palette"></i></div></div>
+                        <h3 class="text-xl font-bold text-white mb-1">Canva Pro</h3>
+                        <p class="text-xs text-gray-400 mb-4">Herramientas premium para crear diseños profesionales.</p>
+                        <div class="space-y-2.5 mb-6 text-sm text-gray-300"><div class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>1 mes $10.000 · 3 meses $20.000 · 1 año $40.000</span></div></div>
+                    </div>
+                    <div><div class="flex items-baseline justify-between mb-4 pt-4 border-t border-gray-800"><span class="text-xs text-gray-400">Desde</span><span class="text-2xl font-extrabold text-white">$10.000</span></div><button onclick="openCheckout('Canva Pro - 1 mes', '$10.000')" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center space-x-2"><span>Comprar Plan</span><i class="fa-solid fa-cart-shopping text-xs"></i></button></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿CÓMO FUNCIONA? -->
+    <section id="como-funciona" class="py-20 bg-cardBg/30 border-y border-gray-800/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-cyan-400 text-sm font-bold uppercase tracking-widest bg-cyan-950/40 px-3 py-1 rounded-full border border-cyan-800/50">Proceso Sencillo</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">¿Cómo comprar en Tomochisteam?</h2>
+                <p class="text-gray-400">Diseñado para que cualquier persona pueda adquirir su servicio en menos de 5 minutos, sin complicaciones técnicas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="glass-card rounded-2xl p-8 relative space-y-4 text-center group hover:border-cyan-500/50 transition-all">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-cyan-600 to-blue-600 text-white text-2xl font-extrabold flex items-center justify-center mx-auto shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Elige tu servicio</h3>
+                    <p class="text-sm text-gray-400">Selecciona la plataforma que deseas y haz clic en "Comprar" para iniciar tu pedido por WhatsApp con datos precargados.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-card rounded-2xl p-8 relative space-y-4 text-center group hover:border-purple-500/50 transition-all">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-accentPurple to-pink-600 text-white text-2xl font-extrabold flex items-center justify-center mx-auto shadow-lg shadow-purple-500/20 group-hover:scale-110 transition-transform">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Realiza el pago</h3>
+                    <p class="text-sm text-gray-400">Transfiere de forma segura mediante nuestros métodos aceptados: Nequi, Daviplata, Nu o llave de Bre-B.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-card rounded-2xl p-8 relative space-y-4 text-center group hover:border-emerald-500/50 transition-all">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-600 text-white text-2xl font-extrabold flex items-center justify-center mx-auto shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-white">¡Disfruta tu contenido!</h3>
+                    <p class="text-sm text-gray-400">Recibe tus datos de acceso o PIN de perfil inmediatamente en tu WhatsApp y comienza a ver tus series favoritas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METODOS DE PAGO Y CONFIANZA -->
+    <section id="beneficios" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Payment Methods -->
+                <div class="space-y-6">
+                    <span class="text-emerald-400 text-sm font-bold uppercase tracking-widest bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-800/50">Pagos Seguros</span>
+                    <h2 class="text-3xl font-extrabold text-white">Métodos de pago aceptados</h2>
+                    <p class="text-gray-400 text-base">Contamos con pasarelas y métodos locales rápidos para que pagues en tu moneda local sin comisiones ocultas.</p>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+                        <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 border border-gray-800">
+                            <div class="w-10 h-10 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-mobile-screen"></i></div>
+                            <span class="text-sm font-bold text-white">Nequi</span>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 border border-gray-800">
+                            <div class="w-10 h-10 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-wallet"></i></div>
+                            <span class="text-sm font-bold text-white">Daviplata</span>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 border border-gray-800">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-wallet"></i></div>
+                            <span class="text-sm font-bold text-white">Nu</span>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 border border-gray-800">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-money-bill-transfer"></i></div>
+                            <span class="text-sm font-bold text-white">Llave de Bre-B</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Guarantee Box -->
+                <div class="glass-card rounded-2xl p-8 border border-purple-500/30 space-y-6 relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-purple-600/10 rounded-full blur-2xl"></div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-2xl font-bold">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Garantía Tomochisteam 30 Días</h3>
+                            <span class="text-xs text-emerald-400 font-medium">Cobertura total durante toda tu suscripción</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Tu tranquilidad es nuestra prioridad. Si llegas a tener cualquier inconveniente técnico con tu cuenta, reemplazamos tu acceso de forma inmediata sin costo adicional durante los 30 días de vigencia de tu plan.
+                    </p>
+                    <ul class="space-y-3 text-sm text-gray-300 pt-2">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span>Soporte técnico directo vía WhatsApp</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span>Cero caídas inesperadas ni bloqueos</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span>Renovación automática opcional con descuento</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS / RESEÑAS -->
+    <section id="testimonios" class="py-20 bg-cardBg/30 border-y border-gray-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-accentPink text-sm font-bold uppercase tracking-widest bg-pink-950/40 px-3 py-1 rounded-full border border-pink-800/50">Testimonios</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Lo que opinan nuestros clientes</h2>
+                <p class="text-gray-400">Miles de usuarios confían cada mes en nuestro servicio rápido y seguro.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="glass-card rounded-2xl p-6 space-y-4 border border-gray-800">
+                    <div class="flex items-center space-x-1 text-yellow-400 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-sm text-gray-300 italic">"Compré la cuenta de Netflix y me llegó el PIN en menos de 3 minutos por WhatsApp. Funciona perfecto en mi Smart TV. Muy recomendados."</p>
+                    <div class="flex items-center space-x-3 pt-2 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-purple-600/30 text-purple-300 flex items-center justify-center font-bold text-sm">CR</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Carlos R.</h4>
+                            <span class="text-xs text-gray-400">Cliente de Netflix</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-card rounded-2xl p-6 space-y-4 border border-gray-800">
+                    <div class="flex items-center space-x-1 text-yellow-400 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-sm text-gray-300 italic">"Tenía mis dudas al principio porque nunca había comprado streaming así, pero la atención por WhatsApp fue súper amable y me ayudaron paso a paso."</p>
+                    <div class="flex items-center space-x-3 pt-2 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-emerald-600/30 text-emerald-300 flex items-center justify-center font-bold text-sm">AM</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Andrea M.</h4>
+                            <span class="text-xs text-gray-400">Cliente de Spotify</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass-card rounded-2xl p-6 space-y-4 border border-gray-800">
+                    <div class="flex items-center space-x-1 text-yellow-400 text-sm">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-sm text-gray-300 italic">"Llevo 3 meses renovando el combo con Disney+ y Netflix y cero problemas. Son muy honestos y cumplen con la garantía."</p>
+                    <div class="flex items-center space-x-3 pt-2 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-blue-600/30 text-blue-300 flex items-center justify-center font-bold text-sm">JP</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Julián P.</h4>
+                            <span class="text-xs text-gray-400">Cliente Combo Dúo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-accentCyan text-sm font-bold uppercase tracking-widest bg-cyan-950/40 px-3 py-1 rounded-full border border-cyan-800/50">Dudas Comunes</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Preguntas Frecuentes</h2>
+                <p class="text-gray-400">Todo lo que necesitas saber antes de adquirir tu cuenta de streaming.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full p-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-white sm:text-lg">¿Las cuentas son compartidas o privadas?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-accentCyan transition-transform"></i>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-6 pb-6 text-sm text-gray-300 space-y-2 border-t border-gray-800/60 pt-4">
+                        <p>Depende del plan que elijas. Las cuentas de Netflix y Max se entregan en modalidad de <strong>perfil privado con PIN exclusivo para ti</strong>, lo que garantiza que nadie interrumpa tus reproducciones. Algunos planes de Spotify o Amazon pueden ser de acceso directo o invitación familiar.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full p-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-white sm:text-lg">¿Qué pasa si la cuenta deja de funcionar durante el mes?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-accentCyan transition-transform"></i>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-6 pb-6 text-sm text-gray-300 space-y-2 border-t border-gray-800/60 pt-4">
+                        <p>¡No te preocupes! Cuentas con nuestra <strong>Garantía de 30 días</strong>. Si llegas a tener cualquier problema de acceso, nos escribes a nuestro WhatsApp de soporte y te reponemos el acceso de inmediato sin costo adicional.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full p-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-white sm:text-lg">¿Cuánto tarda la entrega después de realizar el pago?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-accentCyan transition-transform"></i>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-6 pb-6 text-sm text-gray-300 space-y-2 border-t border-gray-800/60 pt-4">
+                        <p>El tiempo de entrega promedio es de <strong>3 a 5 minutos</strong> una vez confirmado tu comprobante de pago a través de nuestro canal oficial de WhatsApp.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
+                    <button onclick="toggleFaq(4)" class="w-full p-6 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-white sm:text-lg">¿Puedo ver las películas en mi Smart TV y celular?</span>
+                        <i id="faq-icon-4" class="fa-solid fa-chevron-down text-accentCyan transition-transform"></i>
+                    </button>
+                    <div id="faq-content-4" class="hidden px-6 pb-6 text-sm text-gray-300 space-y-2 border-t border-gray-800/60 pt-4">
+                        <p>Sí, todos nuestros servicios funcionan perfectamente en Smart TVs (Samsung, LG, Android TV), teléfonos celulares (Android / iOS), tablets, computadoras y dispositivos como Roku o Firestick.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-cardBg border-t border-gray-800 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Col 1: Brand -->
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-accentPurple to-accentPink flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-bolt text-sm"></i>
+                        </div>
+                        <span class="text-xl font-extrabold text-white">Tomochi<span class="text-accentCyan">steam</span></span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Tu proveedor de confianza para cuentas de streaming con entrega rápida y garantía activa 24/7.
+                    </p>
+                </div>
+
+                <!-- Col 2: Links -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#catalogo" class="hover:text-white transition-colors">Catálogo de Servicios</a></li>
+                        <li><a href="#como-funciona" class="hover:text-white transition-colors">¿Cómo Funciona?</a></li>
+                        <li><a href="#beneficios" class="hover:text-white transition-colors">Garantía y Pagos</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Legal & Support -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Soporte & Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="https://wa.me/573126732080?text=Hola%20Tomochisteam,%20necesito%20soporte" target="_blank" class="hover:text-white transition-colors">Soporte WhatsApp</a></li>
+                        <li><a href="#" onclick="openModal('Términos y Condiciones', 'Nuestros servicios están cubiertos por garantía de 30 días. Las cuentas no deben compartir datos de acceso ni modificar correos principales.')" class="hover:text-white transition-colors">Términos del Servicio</a></li>
+                        <li><a href="#" onclick="openModal('Políticas de Privacidad', 'Tus datos de contacto son utilizados exclusivamente para la entrega y soporte de tus cuentas. No compartimos información con terceros.')" class="hover:text-white transition-colors">Políticas de Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: WhatsApp Direct Box -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Atención Inmediata</h4>
+                    <p class="text-xs text-gray-400">¿Tienes dudas o necesitas un plan personalizado? Escríbenos directamente.</p>
+                    <a href="https://wa.me/573126732080?text=Hola%20Tomochisteam,%20quiero%20más%20información" target="_blank" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-4 py-2.5 rounded-xl text-sm transition-all shadow-lg shadow-emerald-600/20">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Abrir WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 space-y-4 sm:space-y-0">
+                <p>&copy; 2026 Tomochisteam. Todos los derechos reservados.</p>
+                <p class="flex items-center space-x-1">
+                    <span>Diseñado con</span> <i class="fa-solid fa-heart text-pink-500"></i> <span>para streamers y cinéfilos.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE CHECKOUT SIMPLIFICADO -->
+    <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4">
+        <div class="glass-card max-w-md w-full rounded-2xl p-6 sm:p-8 border border-purple-500/30 relative space-y-6 shadow-2xl animate-in fade-in zoom-in duration-200">
+            <button onclick="closeCheckout()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-accentPurple to-pink-600 text-white flex items-center justify-center mx-auto text-xl font-bold">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Finalizar Compra</h3>
+                <p class="text-xs text-gray-400">Estás a un paso de disfrutar tu servicio</p>
+            </div>
+
+            <div class="bg-cardBg p-4 rounded-xl border border-gray-800 space-y-2">
+                <div class="flex justify-between text-sm">
+                    <span class="text-gray-400">Servicio seleccionado:</span>
+                    <span id="modal-product-name" class="font-bold text-white">Netflix Ultra HD</span>
+                </div>
+                <div>
+                    <label for="plan-select" class="block text-xs text-gray-400 mb-1">Elige tu plan:</label>
+                    <select id="plan-select" onchange="updateSelectedPlan()" class="w-full bg-darkBg border border-gray-800 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-accentPurple"></select>
+                </div>
+                <div class="flex justify-between text-sm">
+                    <span class="text-gray-400">Precio:</span>
+                    <span id="modal-product-price" class="font-bold text-cyan-400">$13.000</span>
+                </div>
+            </div>
+
+            <form id="order-form" onsubmit="submitOrder(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Tu Nombre</label>
+                    <input type="text" id="client-name" required placeholder="Ej. Carlos Pérez" class="w-full bg-darkBg border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-accentPurple">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Método de Pago Preferido</label>
+                    <select id="payment-method" class="w-full bg-darkBg border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-accentPurple">
+                        <option value="Nequi">Nequi</option>
+                        <option value="Daviplata">Daviplata</option>
+                        <option value="Nu">Nu</option>
+                        <option value="Llave de Bre-B">Llave de Bre-B</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-emerald-600/30 flex items-center justify-center space-x-2 transition-all">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Confirmar Pedido por WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- GENERAL GENERIC INFO MODAL -->
+    <div id="info-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4">
+        <div class="glass-card max-w-lg w-full rounded-2xl p-6 sm:p-8 border border-gray-800 relative space-y-4 shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="info-modal-title" class="text-xl font-bold text-white">Título</h3>
+            <p id="info-modal-text" class="text-sm text-gray-300 leading-relaxed">Contenido</p>
+            <div class="pt-4 text-right">
+                <button onclick="closeModal()" class="bg-accentPurple hover:bg-purple-600 text-white px-5 py-2 rounded-xl text-sm font-semibold">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
